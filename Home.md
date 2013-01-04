@@ -7,9 +7,9 @@ you wish to make edits.
 First Time Here?
 ----------------
 
-[[Hassle Free Trial]]
-[[What Chef-Workflow Solves]]
-[[Chef-Workflow Components]]
+* [[Hassle Free Trial]]
+* [[What Chef-Workflow Solves]]
+* [[Chef-Workflow Components]]
 
 Integrating Chef-Workflow
 -------------------------
