@@ -1,1 +1,1 @@
-Welcome to the chef-workflow wiki! [Test]
+Welcome to the chef-workflow wiki! [[Test]]
