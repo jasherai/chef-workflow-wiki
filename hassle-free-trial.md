@@ -18,7 +18,7 @@ These simple instructions will get you started.
 * You need a copy of Ruby MRI 1.9.3 (minimum), with [Bundler](http://gembundler.com) installed to it.
 * You also need an installed and working copy of [VirtualBox](http://virtualbox.org).
 * Running the tests and chef server will probably take about 1.5G of RAM which will be "locked", or unswappable.
-* If you have locally addressable machines in the `10.10.10.0/24` subnet, set TEST_CHEF_SUBNET in your environment to a dotted-quad that ends in a 0, that isn't locally accessible.
+* If you have locally addressable machines in the `10.10.10.0/24` subnet, set `TEST_CHEF_SUBNET` in your environment to a dotted-quad that ends in a 0, that isn't locally accessible; for example `192.168.10.0`.
 * Clone it to your machine, or fork it and clone your fork.
 * cd into the clone and type 'bundle install'
 * If you can't wait and just want to see it run, try `bundle exec rake test:full`, which will do an end-to-end full test, including setting up a brand new chef server, and will clean up after it finishes.
