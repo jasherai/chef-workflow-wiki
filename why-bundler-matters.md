@@ -25,7 +25,7 @@ unsurprisingly, these are different, conflicting versions.
 So, we're boned. Sorry. If you want to save your fingers, try adding this alias
 to your shell configuration:
 
-```shell
+```sh
 alias be="bundle exec"
 ```
 
