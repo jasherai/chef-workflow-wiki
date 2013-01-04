@@ -14,30 +14,30 @@ First Time Here?
 Integrating Chef-Workflow
 -------------------------
 
-[[Pitfalls]] **read this before attempting to bootstrap!**
-[[Bootstrapping Chef-Workflow]]
-[[Why Bundler Matters]]
+* [[Pitfalls]] **read this before attempting to bootstrap!**
+* [[Bootstrapping Chef-Workflow]]
+* [[Why Bundler Matters]]
 
 Using Chef-Workflow-Tasklib
 ---------------------------
 
-[[Standard Tasks]] -- covers the defaults available and the optional bits that are included.
-[[Writing Rake Tasks]]
-[[Customizing your Workflow]]
+* [[Standard Tasks]] -- covers the defaults available and the optional bits that are included.
+* [[Writing Rake Tasks]]
+* [[Customizing your Workflow]]
 
 Using Chef-Workflow-Testlib
 ---------------------------
 
-[[Why Integration Testing Matters]]
-[[Using MiniTest]]
-[[Provisioning Machines]]
-[[Testing Multi-Machine Behavior]]
+* [[Why Integration Testing Matters]]
+* [[Using MiniTest]]
+* [[Provisioning Machines]]
+* [[Testing Multi-Machine Behavior]]
 
 Advanced Topics
 ---------------
 
-[[Performance and Concurrency in Integration Tests]]
-[[Support Libraries]]
-[[Using the State Database]]
-[[Writing a Provisioner]]
-[[Supporting Chef-Workflow in your Gem]]
+* [[Performance and Concurrency in Integration Tests]]
+* [[Support Libraries]]
+* [[Using the State Database]]
+* [[Writing a Provisioner]]
+* [[Supporting Chef-Workflow in your Gem]]
