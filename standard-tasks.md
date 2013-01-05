@@ -110,3 +110,5 @@ The default is to check the `cookbooks_path`, but you can alter this behavior
 with `fc_cookbooks_path` on KnifeSupport, which will become available if you
 include the task. You can also adjust the options provided to foodcritic with
 `fc_options`.
+
+See [[Configuring Chef Workflow]] for more information.

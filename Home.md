@@ -15,6 +15,7 @@ Integrating Chef-Workflow
 
 * [[Pitfalls]] **read this before attempting to bootstrap!**
 * [[Bootstrapping Chef-Workflow]]
+* [[Configuring Chef-Workflow]]
 * [[Why Bundler Matters]]
 
 Using Chef-Workflow-Tasklib
