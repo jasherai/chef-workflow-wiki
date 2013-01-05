@@ -68,6 +68,9 @@ commonly used by chef developers. To use these, include them into your
 chef_workflow_task 'chef/cookbooks/resolve/berkshelf'
 ```
 
+You can also forego the "default" task system and include just what you need.
+See [[Customizing your Workflow]] for more information.
+
 Cookbook Resolvers
 ------------------
 
