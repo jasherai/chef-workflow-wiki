@@ -86,8 +86,7 @@ We provide support for:
 * [berkshelf](https://github.com/RiotGames/berkshelf): `chef_workflow_task
   'cookbooks/resolve/librarian'`
 
-Important Notes
-===============
+**Important Notes**
 
 For both of these you must `gem install` these packages directly, e.g., `gem
 install berkshelf`. This is because they have conflicting dependencies we
