@@ -43,3 +43,4 @@ Advanced Topics
 * [[Writing a Provisioner]]
 * [[Supporting Chef-Workflow in your Gem]]
 * [[Filesystem Layout]]
+* [[Environment Variables]]
