@@ -24,7 +24,7 @@ combine these core tasks to automate rote tasks.
   configuration and certificates. This must be done before any tasks will work,
   or the configuration must be pointed at another knife configuration.
 * `chef_server:destroy` - tears down any created chef server.
-* `cookbooks:upload` - upload your cookbooks to the chef server.
+* `chef:cookbooks:upload` - upload your cookbooks to the chef server.
 * `test` - run the integration test suite.
 * `test:recipes` - run the recipes test suite.
 * `test:recipes:cleanup` - clean up recipe machines.
@@ -65,7 +65,7 @@ commonly used by chef developers. To use these, include them into your
 `Rakefile` with `chef_workflow_task`. For example to use 'berkshelf' support:
 
 ```ruby
-chef_workflow_task 'cookbooks/resolve/berkshelf'
+chef_workflow_task 'chef/cookbooks/resolve/berkshelf'
 ```
 
 Cookbook Resolvers
@@ -75,16 +75,16 @@ Cookbook resolvers work a bit like Bundler, but for cookbooks. Chef-Workflow
 supports a common execution strategy for them, by exposing two tasks which are
 found to be common amongst resolvers.
 
-* `cookbooks:resolve` - resolve and install the cookbooks. Will execute before
-  `cookbooks:upload` if it exists.
-* `cookbooks:update` - update the locked dependencies.
+* `chef:cookbooks:resolve` - resolve and install the cookbooks. Will execute before
+  `chef:cookbooks:upload` if it exists.
+* `chef:cookbooks:update` - update the locked dependencies.
 
 We provide support for:
 
 * [librarian](https://github.com/applicationsonline/librarian):
-  `chef_workflow_task 'cookbooks/resolve/berkshelf'`
+  `chef_workflow_task 'chef/cookbooks/resolve/librarian'`
 * [berkshelf](https://github.com/RiotGames/berkshelf): `chef_workflow_task
-  'cookbooks/resolve/librarian'`
+  'chef/cookbooks/resolve/berkshelf'`
 
 **Important Notes**
 
@@ -101,10 +101,10 @@ Foodcritic Support
 ------------------
 
 We also optionally support [foodcritic](https://github.com/acrmp/foodcritic):
-`chef_workflow_task 'cookbooks/foodcritic'`.
+`chef_workflow_task 'chef/cookbooks/foodcritic'`.
 
-This will add a `cookbooks:foodcritic` task that, if a resolver is configured,
-will resolve your cookbooks with `cookbooks:resolve` beforehand.
+This will add a `chef:cookbooks:foodcritic` task that, if a resolver is configured,
+will resolve your cookbooks with `chef:cookbooks:resolve` beforehand.
 
 The default is to check the `cookbooks_path`, but you can alter this behavior
 with `fc_cookbooks_path` on KnifeSupport, which will become available if you
