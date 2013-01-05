@@ -14,9 +14,9 @@ chef_workflow_task 'default'
 Layout]]. `lib/chef-workflow/tasks/default.rb` just contains a ton of other
 requires to other tasks.
 
-Almost all tasks have been deliberately written to only require the
-dependencies they need to function. This means that you can tweak it as you
-please to suit what you actually want to do.
+All tasks have been deliberately written to only require the dependencies they
+need to function. This means that you can tweak it as you please to suit what
+you actually want to do.
 
 Let's say you *just* want to upload cookbooks. No chef server, no other meta,
 no testing system, etc. Your rakefile would look something like this instead:
