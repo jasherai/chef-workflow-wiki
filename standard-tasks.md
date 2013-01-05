@@ -56,3 +56,57 @@ Many tasks are compositions of smaller tasks, intended to streamline rote tasks.
   the integration tests, run the recipe tests, tear everything down and clean
   up. Great for CI, as it cleans up everything before it starts and when it
   finishes.
+
+Optional Tasks
+--------------
+
+We include a few other tasks which are not a part of the "default" set yet are
+commonly used by chef developers. To use these, include them into your
+`Rakefile` with `chef_workflow_task`. For example to use 'berkshelf' support:
+
+```ruby
+chef_workflow_task 'cookbooks/resolve/berkshelf'
+```
+
+Cookbook Resolvers
+------------------
+
+Cookbook resolvers work a bit like Bundler, but for cookbooks. Chef-Workflow
+supports a common execution strategy for them, by exposing two tasks which are
+found to be common amongst resolvers.
+
+* `cookbooks:resolve` - resolve and install the cookbooks. Will execute before
+  `cookbooks:upload` if it exists.
+* `cookbooks:update` - update the locked dependencies.
+
+We provide support for:
+
+* [librarian](https://github.com/applicationsonline/librarian):
+  `chef_workflow_task 'cookbooks/resolve/berkshelf'`
+* [berkshelf](https://github.com/RiotGames/berkshelf): `chef_workflow_task
+  'cookbooks/resolve/librarian'`
+
+**Important Notes**
+
+For both of these you must `gem install` these packages directly, e.g., `gem
+install berkshelf`. This is because they have conflicting dependencies we
+unfortunately have no way of resolving.
+
+Both of these will inject their results into the `cookbooks_path` in
+`KnifeSupport`. It is *strongly advised* that you put nothing in there that is
+not managed by these tools, and add that directory to your `.gitignore` if you
+use these tools.
+
+Foodcritic Support
+------------------
+
+We also optionally support [foodcritic](https://github.com/acrmp/foodcritic):
+`chef_workflow_task 'cookbooks/foodcritic'`.
+
+This will add a `cookbooks:foodcritic` task that, if a resolver is configured,
+will resolve your cookbooks with `cookbooks:resolve` beforehand.
+
+The default is to check the `cookbooks_path`, but you can alter this behavior
+with `fc_cookbooks_path` on KnifeSupport, which will become available if you
+include the task. You can also adjust the options provided to foodcritic with
+`fc_options`.
