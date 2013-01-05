@@ -1,7 +1,7 @@
 Standard Tasks
 --------------
 
-In [[Bootstrapping Cehf Workflow]] a `Rakefile` that looks like this was mentioned:
+In [[Bootstrapping Chef Workflow]] a `Rakefile` that looks like this was mentioned:
 
 ```ruby
 require 'chef-workflow-tasklib'
