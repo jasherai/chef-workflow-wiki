@@ -31,3 +31,6 @@ chef_workflow_task 'default'
 
 * Add `.chef-workflow` to your `.gitignore`.
 * Don't forget to add `Rakefile`, `lib/chef-workflow-config.rb`, `Gemfile` and `Gemfile.lock` to your repository!
+
+`lib/chef-workflow-config.rb` contains lots of bits to twiddle. See
+[[Configuring Chef-Workflow]] for more information.
