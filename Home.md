@@ -36,6 +36,7 @@ Using Chef-Workflow-Testlib
 Advanced Topics
 ---------------
 
+* [[Rake Task Helpers]]
 * [[Performance and Concurrency in Integration Tests]]
 * [[Support Libraries]]
 * [[Using the State Database]]

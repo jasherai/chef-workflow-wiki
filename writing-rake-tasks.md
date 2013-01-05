@@ -74,5 +74,5 @@ Order *is* important here as we want to overwrite the previously-defined
 `chef:cookbooks:upload` task.
 
 You literally have everything available to you in rake tasks, with a bevy of
-[[Support Libraries]] and [[Task Helpers]] to assist you with just about
+[[Support Libraries]] and [[Rake Task Helpers]] to assist you with just about
 anything.
