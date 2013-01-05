@@ -22,8 +22,8 @@ Using Chef-Workflow-Tasklib
 ---------------------------
 
 * [[Standard Tasks]] -- covers the defaults available and the optional bits that are included.
-* [[Writing Rake Tasks]]
 * [[Customizing your Workflow]]
+* [[Writing Rake Tasks]]
 
 Using Chef-Workflow-Testlib
 ---------------------------
@@ -41,3 +41,4 @@ Advanced Topics
 * [[Using the State Database]]
 * [[Writing a Provisioner]]
 * [[Supporting Chef-Workflow in your Gem]]
+* [[Filesystem Layout]]
