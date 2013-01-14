@@ -1,8 +1,8 @@
 Running Cookbook Tests
 ----------------------
 
-chef-workflow's task library (**not** the test library, which is for
-integration testing) supports running cookbook tests with
+chef-workflow's task library ( **not** the test library, which is for
+integration testing ) supports running cookbook tests with
 [minitest-chef-handler](https://github.com/btm/minitest-chef-handler). This
 seems to be what most cookbooks use, fits well with chef-workflow-testlib's
 minitest dependence and most importantly is simple to orchestrate.
