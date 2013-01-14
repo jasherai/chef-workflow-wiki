@@ -24,6 +24,7 @@ Using Chef-Workflow-Tasklib
 * [[Standard Tasks]] -- covers the defaults available and the optional bits that are included.
 * [[Customizing your Workflow]]
 * [[Writing Rake Tasks]]
+* [[Running Cookbook Tests]]
 
 Using Chef-Workflow-Testlib
 ---------------------------
