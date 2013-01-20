@@ -42,6 +42,7 @@ Advanced Topics
 * [[Support Libraries]]
 * [[Understanding the Scheduler]]
 * [[Using the State Database]]
+* [[Stock Provisioners]]
 * [[Writing a Provisioner]]
 * [[Supporting Chef-Workflow in your Gem]]
 * [[Filesystem Layout]]
