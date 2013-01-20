@@ -95,3 +95,44 @@ data_bags/
   creating a chef server with the `chef_server:create` rake task. It would be
   in your interest to review the default before trying to change this.
 
+configure_vagrant
+-----------------
+
+Things related to vagrant. Note that these are only consulted if the
+`machine_provisioner` is set to `:vagrant`
+
+* `box_url`: The url to your vagrant box -- currently chef-workflow does not
+  support local-only boxes.
+
+configure_ec2
+-------------
+
+Things related to EC2. Note that these are only consulted if the
+`machine_provisioner` is set to `:ec2`.
+
+**BIG UGLY NOTE ABOUT ACCESS KEYS**: You can specify them in the configuration,
+and it is a very good idea you do, on a separate testing account. If you don't,
+your environment will be consulted -- the somewhat standard `AWS_ACCESS_KEY_ID`
+and `AWS_SECRET_ACCESS_KEY`. The EC2 provisioner creates its own security
+groups by default, and only destroys the machines it knows about, but
+**consider yourself warned**. See [[Stock Provisioners]] for more information
+on using EC2.
+
+* `access_key_id`: The AWS access key used to provision machines and manipulate
+  security groups.
+* `secret_access_key`: The AWS secret access key.
+* `ami`: The Amazon Machine Image identifier used for provisioning machines.
+* `instance_type`: Called a "flavor" by other systems, this is the machine
+  class. `m1.large`, etc.
+* `region`: The AWS region to provision in. Unlike most tools, there is **no
+  default**. You must set this.
+* `ssh_key`: The name of the SSH key registered with AWS. Be sure to couple
+  this with `ssh_identity_file` from `configure_knife`.
+* `security_groups`: a list of group names or `:auto`, the default. `:auto`
+  will create a new group and provision all your machines underneath it. It
+  will also be cleaned up when tasks like `chef:clean` are run.
+* `security_group_open_ports`: only used when `security_groups` is set to
+  `:auto`. Authorizes all ports in the list ingress on both tcp and udp.
+  Default is `[22, 4000]`.
+* `provision_wait`: The time in seconds to wait after an instance provision is
+  requested before giving up. The default is 300 seconds (5 minutes).
