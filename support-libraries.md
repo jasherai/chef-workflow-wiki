@@ -158,3 +158,31 @@ end
 f = Foo.new
 f.run_knife_cookbook_sync # => runs 'knife cookbook sync -a'
 ```
+
+ChefWorkflow::KnifeSupport
+--------------------------
+
+`knife.rb`, this is configuration relating to the use of chef and knife. See
+[[Configuration Sections]] for more information.
+
+ChefWorkflow::Scheduler
+-----------------------
+
+`scheduler.rb`, The scheduler manages all things that have to do with machines.
+A great deal of the overall documentation is used discussing this topic, but
+[[Understanding the Scheduler]] is probably the most direct resource for those
+understanding how to work with this class. See also [[Rake Task Helpers]] for
+those looking to use this class with `chef-workflow-tasklib`.
+
+ChefWorkflow::VagrantSupport
+----------------------------
+
+`vagrant.rb`, this is the configuration relating to the use of vagrant. See
+[[Configuration Sections]] for more information.
+
+ChefWorkflow::VM
+----------------
+
+`vm.rb` and the `vm` subdirectory, this is the VM database and the provisioners
+themselves. Read [[Using the State Database]], [[Understanding the Scheduler]],
+and [[Writing a Provisioner]] for more information on this system.
