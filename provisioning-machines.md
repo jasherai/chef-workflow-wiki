@@ -63,7 +63,8 @@ deprovision('syslog-client')
 The `wait_for` command blocks the test runner until the list of server groups
 provided has successfully provisioned. This is important for controlling flow
 around provisions and absolutely critical for provisioners that exploit the
-parallel scheduler, like EC2.
+parallel scheduler, like EC2. It would be worth your time to read [[Performance
+and Concurrency in Integration Tests]] to understand how to exploit this call.
 
 Example:
 
