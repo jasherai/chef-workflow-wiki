@@ -95,6 +95,9 @@ class TestMonitor < MiniTest::Unit::ProvisionedTestCase
   # while we're waiting, the other machines will still be going through their
   # provisions, so in many cases there will be less waiting as the tests
   # progress than with a serial provision.
+  #
+  # You don't have to wait for 'monitor' here because it's a dependency of
+  # 'web-server'.
   def test_monitors_web_server
     wait_for('web-server')
     # test web-server stuff
@@ -103,6 +106,13 @@ class TestMonitor < MiniTest::Unit::ProvisionedTestCase
   def test_monitors_mail_server
     wait_for('mail-server')
     # test mail-server
+  end
+
+  def test_monitors_syslog_and_database
+    # wait_for takes a list of server groups. It will not continue until all
+    # groups are provisioned.
+    wait_for('syslog-server', 'database-server')
+    # test this stuff
   end
 
   # ... you get the idea. by the time we get to the second or third test,
