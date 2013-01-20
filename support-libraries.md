@@ -18,7 +18,7 @@ without assignment operators, similar to how chef itself deals with attributes.
 ```ruby
 
 class Foo
-  extend AttrSupport
+  extend ChefWorkflow::AttrSupport
 
   fancy_attr :bar
 end
