@@ -30,6 +30,12 @@ the chef bootstrap will hold up the process until a successful search completes
 for all machines. This ensures that all machines are fully known by the chef
 server before testing begins.
 
+Machines will have the node name `$role-$num`, where `$num` indicates the order
+in which they were provisioned. This order is preserved throughout the testing
+system. For example, if you provisioned two machines in the server group
+`syslog-client`, the node names would be `syslog-client-1` and
+`syslog-client-2` respectively.
+
 Note that for dependent provisions that the server groups depended on **must
 already be scheduled**, even if they are not provisioned yet. `provision` will
 raise an error unless this is the case.
