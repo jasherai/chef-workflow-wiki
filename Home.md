@@ -40,6 +40,7 @@ Advanced Topics
 * [[Rake Task Helpers]]
 * [[Performance and Concurrency in Integration Tests]]
 * [[Support Libraries]]
+* [[Understanding the Scheduler]]
 * [[Using the State Database]]
 * [[Writing a Provisioner]]
 * [[Supporting Chef-Workflow in your Gem]]
