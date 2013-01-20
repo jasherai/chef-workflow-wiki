@@ -24,5 +24,4 @@ If you wish to inspect the running configuration, the rake task
 `chef:info:config` will yield it.
 
 If you want to understand more about the configuration system, check out the
-[[Support Libraries]] documentation which covers the configuration system and
-lots of other internal topics.
+[[Configuration Sections]] documentation.
