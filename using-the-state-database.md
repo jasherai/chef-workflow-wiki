@@ -61,6 +61,14 @@ another_set.add("f00f")
 a_set.add("f00f")
 a_set.include?("woot") #=> true
 a_set.to_set & another_set.to_set # => Set.new("f00f")
+
+# hashes (aka Maps)
+
+a_map = ChefWorkflow::DatabaseSupport::Map.new("some_maps", "map_1")
+a_map["hey"] = "there"
+# That's right, you can nest them. No, they don't have to be in the same table.
+a_map["hello"] = ChefWorkflow::DatabaseSupport::Map.new("some_maps", "map_1_sub")
+a_map["hello"]["world"] = 1
 ```
 
 Note that calls like `to_a` and `to_set` copy to native types -- modifications
