@@ -54,7 +54,7 @@ end
   * All chef-workflow interaction with the provisioned machines will be
     performed over the external interface. If you wish to drive internal
     interaction, use the ssh helpers or write additional helpers.
-  * By default, a security group will be defined that all machines will run
+  * By default, a security group will be created that all machines will run
     under with a conservative firewall.
      * You can change the ports that are open, which apply to all machines.
      * You can also create pre-seeded security groups with more elaborate rules.
