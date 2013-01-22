@@ -62,7 +62,7 @@ end
       flexibility.
      * auto-created security groups are destroyed when the `chef:clean` task is run.
 * Instance provisioning is done by default from keys in the user's shell
-  environment. **This is overridable and strongly recommended.**
+  environment. **This is overridable and it is strongly recommended you do so.**
 * The parallel scheduler is used by default. See [[Performance and Concurrency in Integration Tests]].
 * If desired, one can employ a number of techniques such as using EBS-root AMIs
   or larger instances to improve provisioning performance as well, at the cost
