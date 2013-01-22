@@ -16,13 +16,13 @@ Basic Terminology
 * VM Database: This is the system used to persist changes in the scheduler.
   Most of the data you get back from chef-workflow in rake tasks and tests
   comes from this system.
-* Provisioner: An object (*not* a class) that has a known interface which
+* Provisioner: An object ( *not* a class ) that has a known interface which
   describes how machine relationships (such as a VM provision, or bootstrapping
   a node) can be applied and reverted. See [[Writing a Provisioner]] for
   further exposition.
 * Serial and Parallel: while not divergent from their canonical definitions,
   these are actually mutually exclusive modes that the scheduler runs in that
-  determines how it tackles provisioning.
+  determine how it tackles provisioning.
 * Server Group or Role: A name associated with a set of provisioners. This is
   additionally applied to the machines that make up the result of a
   provisioning operation. This term is conflated with Chef's roles due to an
@@ -32,7 +32,7 @@ Basic Terminology
 Know Your Threading
 -------------------
 
-Reading the code, and some of the terms use here will require some background
+Reading the code, and some of the terms used here will require some background
 with parallel programming, particularly related to threads and concurrency
 problems like [Dining
 Philosophers](http://en.wikipedia.org/wiki/Dining_Philosophers). It is also
@@ -107,15 +107,15 @@ Provisioners are objects which have a specific interface used for raising and
 tearing down resources related to a server group. The server group is
 provisioned with a list of provisioners, execution of the `startup` method
 occurs for each one, the return value of the most recently executed passed to
-the next, `reduce` style. `nil` is passed to the first `startup` call.
+the next, `apply` style. `nil` is passed to the first `startup` call.
 
 Shutdown occurs by reversing the list and calling the `shutdown` method.
 
-Any non-true value from the `startup` or `shutdown` calls indicates that the
-(de)provisioning process failed. If `force_deprovision` is set, `shutdown` will
-continue to execute, otherwise it will log the failed deprovision and abort the
-attempt (but the scheduler will still continue). Failed `startup` will raise
-which will bubble up to the main thread.
+Any non-true value returned from the `startup` or `shutdown` calls indicates
+that the (de)provisioning process failed. If `force_deprovision` is set,
+`shutdown` will continue to execute, otherwise it will log the failed
+deprovision and abort the attempt (but the scheduler will still continue).
+Failed `startup` will raise which will bubble up to the main thread.
 
 All state transitions for provisioners are tracked in the VM database, by way
 of storing them as marshalled objects associated with the server group name.
