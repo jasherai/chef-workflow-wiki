@@ -56,11 +56,11 @@ end
     interaction, use the ssh helpers or write additional helpers.
   * By default, a security group will be defined that all machines will run
     under with a conservative firewall.
-    * You can change the ports that are open, which apply to all machines.
-    * You can also create pre-seeded security groups with more elaborate rules.
+     * You can change the ports that are open, which apply to all machines.
+     * You can also create pre-seeded security groups with more elaborate rules.
       They still apply to all the machines, but this offers a little more
       flexibility.
-    * auto-created security groups are destroyed when the `chef:clean` task is run.
+     * auto-created security groups are destroyed when the `chef:clean` task is run.
 * Instance provisioning is done by default from keys in the user's shell
   environment. **This is overridable and strongly recommended.**
 * The parallel scheduler is used by default. See [[Performance and Concurrency in Integration Tests]].
