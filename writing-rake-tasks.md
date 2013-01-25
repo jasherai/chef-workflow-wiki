@@ -58,7 +58,7 @@ for you. It worries about what chef server you want to point to. In this case
 we execute `knife cookbook sync -a`, which will sync all cookbooks to the
 chef server, depending on if the on-disk cookbooks differ from the server.
 
-Because we overwrote "chef:cookbooks:upload", we see this benefit throughout
+Because we overwrote `chef:cookbooks:upload`, we see this benefit throughout
 the whole workflow -- for example, `chef:upload` will use this task as will
 `test:full`.
 
