@@ -19,7 +19,7 @@ need to function. This means that you can tweak it as you please to suit what
 you actually want to do.
 
 Let's say you *just* want to upload cookbooks. No chef server, no other meta,
-no testing system, etc. Your rakefile would look something like this instead:
+no testing system, etc. Your `Rakefile` would look something like this instead:
 
 ```ruby
 require 'chef-workflow-tasklib'
