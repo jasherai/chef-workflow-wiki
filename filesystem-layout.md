@@ -26,5 +26,35 @@ All chef-workflow tooling across all gems lives has a root of `chef-workflow/`.
 Anything outside of that is probably a build product.
 
 <table>
-<th><td><b>Directory</b></td><td><b>Purpose</b></td><td><b>Primary gem</b></td></th>
+<tr><td><b>Directory</b></td><td><b>Purpose</b></td><td><b>Primary gem</b></td></tr>
+
+<tr><td>`support/`          </td><td>Basic support and configuration libraries</td><td>chef-workflow        </td></tr>
+<tr><td>`support/db`        </td><td>Database Layer                           </td><td>chef-workflow        </td></tr>
+<tr><td>`support/vm`        </td><td>Provisioners                             </td><td>chef-workflow        </td></tr>
+<tr><td>`support/vm/helpers`</td><td>Helpers specific to Provisioners         </td><td>chef-workflow        </td></tr>
+<tr><td>`tasks/`            </td><td>Basic Rake Tasks (see below)             </td><td>chef-workflow-tasklib</td></tr>
+<tr><td>`task-helpers/`     </td><td>Helpers for Rake Tasks                   </td><td>chef-workflow-tasklib</td></tr>
+<tr><td>`helpers/`          </td><td>Test Helpers                             </td><td>chef-workflow-testlib</td></tr>
+<tr><td>`runner/`           </td><td>Test Runners                             </td><td>chef-workflow-testlib</td></tr>
+<tr><td>`test-case/`        </td><td>MiniTest TestCase subclasses             </td><td>chef-workflow-testlib</td></tr>
 </table>
+
+Rake Tasks
+----------
+
+There's a pretty gigantic tree under `tasks/`. It's partitioned by section,
+then for the most part by task name, although there are a few exceptions. See
+[[Standard Tasks]] for more information on the tasks that chef-workflow
+provides.
+
+Exceptions
+----------
+
+Of course there are exceptions. :)
+
+* `bin/chef-workflow-bootstrap` is in the `chef-workflow` gem and is a script
+  to bootstrap ... chef-workflow. See [[Bootstrapping Chef Workflow]] for more
+  information.
+* `chef-workflow-tasklib`, the require, is used to bootstrap functionality to
+  require tasks with `chef_workflow_task`. Unsurprisingly, it lives in the
+  `chef-workflow-tasklib` gem.
