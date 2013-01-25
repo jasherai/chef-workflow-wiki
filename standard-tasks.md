@@ -16,7 +16,7 @@ each task does in the event you want more information.
 Core Tasks
 ----------
 
-These tasks provide primitive functionality that let you control in a fine
+These tasks provide primitive functionality that lets you control in a fine
 grained fashion how certain things happen. See below for composite tasks which
 combine these core tasks to automate rote tasks.
 
