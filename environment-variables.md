@@ -42,7 +42,8 @@ machines in 10.10.10/24 as VirtualBox will overtake these addresses. ARP is a
 hell of a drug.
 
 The code that does this is less than ideal. If you change this, be sure the
-subnet definition always ends in `.0`. Also, it only does /24 right now. Sorry.
+subnet definition always ends in `.0` -- for example, `192.168.1.0`. Also, it
+only does /24 right now. Sorry.
 
 AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
 -------------------------------------------
