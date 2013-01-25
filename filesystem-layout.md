@@ -28,15 +28,15 @@ Anything outside of that is probably a build product.
 <table>
 <tr><td><b>Directory</b></td><td><b>Purpose</b></td><td><b>Primary gem</b></td></tr>
 
-<tr><td>`support/`          </td><td>Basic support and configuration libraries</td><td>chef-workflow        </td></tr>
-<tr><td>`support/db`        </td><td>Database Layer                           </td><td>chef-workflow        </td></tr>
-<tr><td>`support/vm`        </td><td>Provisioners                             </td><td>chef-workflow        </td></tr>
-<tr><td>`support/vm/helpers`</td><td>Helpers specific to Provisioners         </td><td>chef-workflow        </td></tr>
-<tr><td>`tasks/`            </td><td>Basic Rake Tasks (see below)             </td><td>chef-workflow-tasklib</td></tr>
-<tr><td>`task-helpers/`     </td><td>Helpers for Rake Tasks                   </td><td>chef-workflow-tasklib</td></tr>
-<tr><td>`helpers/`          </td><td>Test Helpers                             </td><td>chef-workflow-testlib</td></tr>
-<tr><td>`runner/`           </td><td>Test Runners                             </td><td>chef-workflow-testlib</td></tr>
-<tr><td>`test-case/`        </td><td>MiniTest TestCase subclasses             </td><td>chef-workflow-testlib</td></tr>
+<tr><td><code>support/</code>          </td><td>Basic support and configuration libraries</td><td>chef-workflow        </td></tr>
+<tr><td><code>support/db</code>        </td><td>Database Layer                           </td><td>chef-workflow        </td></tr>
+<tr><td><code>support/vm</code>        </td><td>Provisioners                             </td><td>chef-workflow        </td></tr>
+<tr><td><code>support/vm/helpers</code></td><td>Helpers specific to Provisioners         </td><td>chef-workflow        </td></tr>
+<tr><td><code>tasks/</code>            </td><td>Basic Rake Tasks (see below)             </td><td>chef-workflow-tasklib</td></tr>
+<tr><td><code>task-helpers/</code>     </td><td>Helpers for Rake Tasks                   </td><td>chef-workflow-tasklib</td></tr>
+<tr><td><code>helpers/</code>          </td><td>Test Helpers                             </td><td>chef-workflow-testlib</td></tr>
+<tr><td><code>runner/</code>           </td><td>Test Runners                             </td><td>chef-workflow-testlib</td></tr>
+<tr><td><code>test-case/</code>        </td><td>MiniTest TestCase subclasses             </td><td>chef-workflow-testlib</td></tr>
 </table>
 
 Rake Tasks
