@@ -152,6 +152,9 @@ class Foo
   def run_knife_cookbook_sync
     command = init_knife_plugin(Chef::Knife::CookbookSync, %w[-a])
     command.run
+    # Chef::Knife::UI is given a bunch of StringIO objects that you can mess with
+    puts command.ui.stdout.string
+    puts command.ui.stderr.string
   end
 end
 
