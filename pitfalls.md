@@ -2,7 +2,7 @@ Pitfalls
 --------
 
 Chef-Workflow does have some expectations of your chef repository. Most of this
-is unavoidable, and some of it is a balance of difficulty and pragmaticism.
+is unavoidable, and some of it is a balance of difficulty and pragmatism.
 Whenever possible, we're more interested in letting you decide how things will
 work instead of telling you how things will work, so please let us know if
 there are good solutions to resolve some of these things for you.
@@ -49,10 +49,12 @@ converges would align the dependencies.
 
 The difference is that the test library is not going to tolerate a failing
 converge, and we think it's a feature that it doesn't. So, what you'll need to
-do is make your cookbooks tolerate the inability to configure the
-co-dependency, and then use the test helper `ssh_role_command` to double
-converge after both succeed. We think this actually results in more robust
-cookbooks.
+do is engineer your cookbooks to deal with one or both of the services not
+being available at converge time, but still able to take action if they are.
+
+After that's working, then you can use the test helper `ssh_role_command` to
+double converge after both succeed. We think this actually results in more
+robust cookbooks.
 
 The code would look something like this:
 
