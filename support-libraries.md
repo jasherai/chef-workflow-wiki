@@ -186,3 +186,9 @@ ChefWorkflow::VM
 `vm.rb` and the `vm` subdirectory, this is the VM database and the provisioners
 themselves. Read [[Using the State Database]], [[Understanding the Scheduler]],
 and [[Writing a Provisioner]] for more information on this system.
+
+ChefWorkflow::SSHHelper
+-----------------------
+
+`ssh.rb`, when included or extended adds several ssh orchestration methods.
+Used both in testlib and tasklib.
