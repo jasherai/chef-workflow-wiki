@@ -52,8 +52,7 @@ whether or not you configure them, and no matter what your
 * `vm_file`: the path to the state database. by default, based off the `workflow_dir`
 * `machine_provisioner`: the provisioner used to create virtual machines.
   Accepts `:vagrant`, `:ec2`, or a class name (which must exist when
-  `lib/chef-workflow-config.rb` is loaded). Default is `:vagrant`. Read [[Stock
-  Provisioners]] for more information.
+  `lib/chef-workflow-config.rb` is loaded). Default is `:vagrant`. Read [[Stock Provisioners]] for more information.
 
 configure_knife
 ---------------
